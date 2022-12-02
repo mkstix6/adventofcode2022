@@ -15,6 +15,8 @@ data.forEach((curr) => {
     }
 })
 
+let answerPart01: number
+
 let mostIndex = 0
 let prev = 0
 let total = 0
@@ -26,6 +28,8 @@ function topElf() {
         }
     })
     console.log({ mostIndex, prev })
+
+    if (!answerPart01) answerPart01 = prev
 }
 
 for (let i = 0; i < 3; i++) {
@@ -36,3 +40,7 @@ for (let i = 0; i < 3; i++) {
     prev = 0
 }
 console.log({ total })
+
+// Confirmed correct answer checks
+console.assert(answerPart01 === 71934, 'Part01 correct answer')
+console.assert(total === 211447, 'Part02 correct answer')
