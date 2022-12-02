@@ -72,3 +72,7 @@ const sum = (accumulator: number, current: number): number =>
 const contestTotal = rounds.map(computeRoundScore).reduce(sum, 0)
 const contestCorrectTotal = rounds.map(computeCorrectRoundScore).reduce(sum, 0)
 console.log({ contestTotal, contestCorrectTotal })
+
+// Confirmed correct answer checks
+console.assert(contestTotal === 13675, 'Part01 correct answer')
+console.assert(contestCorrectTotal === 14184, 'Part02 correct answer')
